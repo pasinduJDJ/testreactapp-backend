@@ -5,6 +5,7 @@ const app = require("./app");
 const port = 3001;
 const host = '127.0.0.1';
 const mongoose = require('mongoose');
+const router = require('./router');
 
 app.use(cors());
 app.use(express.json());
@@ -26,3 +27,5 @@ connect();
 const server = app.listen(port, host, ()=>{
     console.log("Node Server is Working.");
 })
+
+app.use('/api',router);
