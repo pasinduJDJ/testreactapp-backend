@@ -20,19 +20,19 @@ app.get("/users",(req,res) =>{
 })
 
 app.post("/createUser",(req,res) =>{
-    controller.addUser(req.body,(callback) =>{
+    controller.addUser(req.body,(callack) =>{
         res.send();
     })
 })
 
 app.put("/updateUser",(req,res) =>{
-    controller.updateUser(req.body,(callback) =>{
+    controller.updateUser(req.body,(callack) =>{
         res.send(callback);
     })
 })
 
 app.delete("/deleteUser",(req,res) =>{
-    controller.deleteUser(req.body,(callback) =>{
+    controller.deleteUser(req.body,(callack) =>{
         res.send(callback);
     })
 })
